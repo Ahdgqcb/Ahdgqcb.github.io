@@ -77,6 +77,7 @@
                 email: "Email",
                 address: "Adresa",
                 footer: "&copy; 2025 UNIQA. Všetky práva vyhradené.",
+                financialAgent: "Finančný agent UNIQA", // додано переклад
             },
             uk: {
                 title: "Фінансовий агент UNIQA",
@@ -92,6 +93,7 @@
                 email: "Email",
                 address: "Адреса",
                 footer: "&copy; 2025 UNIQA. Усі права захищено.",
+                financialAgent: "Фінансовий агент UNIQA", // додано переклад
             },
             en: {
                 title: "UNIQA Financial Agent",
@@ -107,6 +109,7 @@
                 email: "Email",
                 address: "Address",
                 footer: "&copy; 2025 UNIQA. All rights reserved.",
+                financialAgent: "UNIQA Financial Agent", // додано переклад
             },
             cs: {
                 title: "Finanční agent UNIQA",
@@ -122,6 +125,7 @@
                 email: "Email",
                 address: "Adresa",
                 footer: "&copy; 2025 UNIQA. Všechna práva vyhrazena.",
+                financialAgent: "Finanční agent UNIQA", // додано переклад
             },
             hu: {
                 title: "UNIQA Pénzügyi Ügynök",
@@ -137,6 +141,7 @@
                 email: "Email",
                 address: "Cím",
                 footer: "&copy; 2025 UNIQA. Minden jog fenntartva.",
+                financialAgent: "UNIQA Pénzügyi Ügynök", // додано переклад
             }
         };
 
@@ -147,13 +152,14 @@
                 el.textContent = translations[lang][key];
             });
             document.title = translations[lang].title;
+            document.querySelector("h1").textContent = translations[lang].financialAgent; // оновлення заголовка
         }
     </script>
 </head>
 
 <body onload="setLanguage('sk')">
     <header>
-        <h1 data-translate="title">Finančný agent UNIQA</h1>
+        <h1 data-translate="financialAgent">Finančný agent UNIQA</h1> <!-- переклад назви -->
         <p data-translate="aboutText">UNIQA je medzinárodná poisťovacia spoločnosť...</p>
     </header>
 
