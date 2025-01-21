@@ -77,7 +77,9 @@
                 email: "Email",
                 address: "Adresa",
                 footer: "&copy; 2025 UNIQA. Všetky práva vyhradené.",
-                financialAgent: "Finančný agent UNIQA", // додано переклад
+                financialAgent: "Finančný agent UNIQA",
+                agentName: "Oleksandr Martysh",
+                financialAgentText: "Finančný agent:",
             },
             uk: {
                 title: "Фінансовий агент UNIQA",
@@ -93,7 +95,9 @@
                 email: "Email",
                 address: "Адреса",
                 footer: "&copy; 2025 UNIQA. Усі права захищено.",
-                financialAgent: "Фінансовий агент UNIQA", // додано переклад
+                financialAgent: "Фінансовий агент UNIQA",
+                agentName: "Олександр Мартиш",
+                financialAgentText: "Фінансовий агент:",
             },
             en: {
                 title: "UNIQA Financial Agent",
@@ -109,7 +113,9 @@
                 email: "Email",
                 address: "Address",
                 footer: "&copy; 2025 UNIQA. All rights reserved.",
-                financialAgent: "UNIQA Financial Agent", // додано переклад
+                financialAgent: "UNIQA Financial Agent",
+                agentName: "Oleksandr Martysh",
+                financialAgentText: "Financial Agent:",
             },
             cs: {
                 title: "Finanční agent UNIQA",
@@ -125,7 +131,9 @@
                 email: "Email",
                 address: "Adresa",
                 footer: "&copy; 2025 UNIQA. Všechna práva vyhrazena.",
-                financialAgent: "Finanční agent UNIQA", // додано переклад
+                financialAgent: "Finanční agent UNIQA",
+                agentName: "Oleksandr Martysh",
+                financialAgentText: "Finanční agent:",
             },
             hu: {
                 title: "UNIQA Pénzügyi Ügynök",
@@ -141,7 +149,9 @@
                 email: "Email",
                 address: "Cím",
                 footer: "&copy; 2025 UNIQA. Minden jog fenntartva.",
-                financialAgent: "UNIQA Pénzügyi Ügynök", // додано переклад
+                financialAgent: "UNIQA Pénzügyi Ügynök",
+                agentName: "Oleksandr Martysh",
+                financialAgentText: "Pénzügyi ügynök:",
             }
         };
 
@@ -152,14 +162,16 @@
                 el.textContent = translations[lang][key];
             });
             document.title = translations[lang].title;
-            document.querySelector("h1").textContent = translations[lang].financialAgent; // оновлення заголовка
+            document.querySelector("h1").textContent = translations[lang].financialAgent;
+            document.querySelector("#agent-name").textContent = translations[lang].agentName; // Оновлення імені агента
+            document.querySelector("#financial-agent-text").textContent = translations[lang].financialAgentText; // Оновлення тексту "Фінансовий агент"
         }
     </script>
 </head>
 
 <body onload="setLanguage('sk')">
     <header>
-        <h1 data-translate="financialAgent">Finančný agent UNIQA</h1> <!-- переклад назви -->
+        <h1 data-translate="financialAgent">Finančný agent UNIQA</h1>
         <p data-translate="aboutText">UNIQA je medzinárodná poisťovacia spoločnosť...</p>
     </header>
 
@@ -187,7 +199,7 @@
 
         <section id="contact" class="contact">
             <h2 data-translate="contact">Kontakty</h2>
-            <p><strong>Фінансовий агент: </strong>Oleksandr Martysh</p>
+            <p><strong id="financial-agent-text" data-translate="financialAgentText">Фінансовий агент:</strong> <span id="agent-name">Oleksandr Martysh</span></p>
             <p><span data-translate="phone">Телефон</span>: +421 951 826 628</p>
             <p><span data-translate="email">Email</span>: <a href="mailto:uniqa.alexmartysh@gmail.com">uniqa.alexmartysh@gmail.com</a></p>
             <p><span data-translate="address">Адреса</span>: Bratislava, Holičska 23</p>
